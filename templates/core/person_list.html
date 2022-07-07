@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Person List</h1>
+  {% if person_list %}
+    <ul>
+      {% for person in person_list %}
+        <li>{{ person }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no people</p>
+  {% endif %}
+{% endblock %}
